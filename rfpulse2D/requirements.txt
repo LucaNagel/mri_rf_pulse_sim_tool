@@ -1,0 +1,6 @@
+matplotlib==3.6.3
+numpy==1.24.1
+phantominator==0.6.4
+pynufft==2022.2.4
+scipy==1.10.0
+setuptools==44.0.0
