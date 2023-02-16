@@ -2,7 +2,13 @@
 This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** to perform Bloch simulations of the RF Pulses in Matlab. Also has the option to simulate inhomogeneous B1 excitation fields as well as repeated excitations (bSSFP).
 
 ## Installation:
-1. Install **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)**. You'll need a compiler to covert .c into .mex64 files.
+1. Install **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)**.
+- !You have to change *int outsize[3];* in line 551 to *mwSize outsize[3];* !
+-
+    mex -v bloch_working.c
+
+- You might need to install an compiler (Windows), the one that MathWorks suggests is this one: https://de.mathworks.com/support/requirements/supported-compilers.html 
+
 2. You'll need to have Matlab's Appdesigner installed.
 
 ## Usage:
