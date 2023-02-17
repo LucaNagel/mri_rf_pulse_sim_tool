@@ -9,7 +9,7 @@ This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/
 - Open a Matlab session in the *bloch_sim* directory or use `cd('\path\to\bloch_sim\')`
 - In the Command Window run
     ```
-    mex -v bloch_working.c
+    mex -v bloch.c
     ```
 
 - You might need to install an compiler (Windows), the one that MathWorks suggests is this one: https://de.mathworks.com/support/requirements/supported-compilers.html
