@@ -3,13 +3,15 @@ This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/
 
 ## Installation:
 1. Install **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)**.
-- !You have to change *int outsize[3];* in line 551 to *mwSize outsize[3];* !
--
+- Download *bloch.m* and *bloch.c* and save them into the folder *bloch_sim* (make a new one)
+- Add the path where you store them to your matlab PATHS (HOME -> Set Path --> Add Folder)
+- Open *bloch.c* with any editor and change *int outsize[3];* in line 551 to *mwSize outsize[3];*
+- Open a Matlab session in the *bloch_sim* directory or use *cd('\path\to\bloch_sim\')*
+- In the Command Window run
     mex -v bloch_working.c
 
-- You might need to install an compiler (Windows), the one that MathWorks suggests is this one: https://de.mathworks.com/support/requirements/supported-compilers.html 
-
-2. You'll need to have Matlab's Appdesigner installed.
+- You might need to install an compiler (Windows), the one that MathWorks suggests is this one: https://de.mathworks.com/support/requirements/supported-compilers.html
+- You'll need to have Matlab's Appdesigner installed.
 
 ## Usage:
 1. Start by either double-clicking _simulate_rf_pulse_b1_tool.mlapp_ (should start appdesigner) or by typing appdesigner in Matlab's command window and opening the _simulate_rf_pulse_b1_tool.mlapp_
