@@ -16,7 +16,7 @@ This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/
 
 2. Download `mri_rf_pulse_sim_tool` and add it to your matlabs PATHS (HOME &rarr; Set Path &rarr; Add Folder)
 - You'll need to have Matlab's Appdesigner installed.
-- type `appdesigner` in matlab Command Window and open simulate_rf_pulse_b1_tool in the `mri_rf_pulse_sim_tool`  folder, then press `F5`
+- type `appdesigner` in matlab Command Window and open `simulate_rf_pulse_b1_tool` in the `mri_rf_pulse_sim_tool`  folder, then press `F5`
 
 
 ## Usage:
