@@ -40,7 +40,7 @@ Start by either double-clicking _simulate_rf_pulse_b1_tool.mlapp_ (should start 
 You can also change the range and the resolution (frequency **freq[Hz]** and position **FOV[cm]**) over which the simulation will be performed.
 6. You can also change the `Sample` properties, such as **T1[s]** and **T2[s]**. You can also simulate hyperpolarized experiments by setting the polarization HP to higher than 1.
 6. Pressing `Simulate!` will run the Bloch Simulation with the selected parameters.
-- Note: If the parameter *yGradient Strength* is >0, a "slice selective Gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
+- Note: If the parameter **yGradient Strength** is >0, a "slice selective Gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
 7. The simulation results will be plotted in the lower left windows.
 8. You can select one or multiple (hold Shift key) properties (Mx, My, ...) of the simulated magnetization.
 - If you didn't load a B1 map, just use the homogeneous (homo. B1) options.
@@ -71,7 +71,7 @@ In case the **N[points]** parameter turns red, type in a slightly bigger or smal
 
 You can have a look at what the frequency response profile looks like in the lower right figure. You can change the repetition with the *rep* slider.
 
-
+<img src="./figures/Screenshot bSSFP Simulation example full GUI.png" alt = "Screnshot of the GUI with exemplarily parameter selection." width="1000"/>
 
 
 
