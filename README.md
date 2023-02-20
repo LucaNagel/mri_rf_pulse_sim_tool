@@ -56,12 +56,12 @@ In the Tab `Simulate Repeated Excitation (FISP/bSSFP)`:
 1. Set TR[ms] to your desired repetition time (Note: can not be shorter than pulse duration).
 2. Set number of time points of each pulse that are simulated (N [points]) to a reasonably high number (~500).
 3. Set the number of repetitions that you want to simulate (N [Reps]).
-4. Choose the phase difference of the RF pulse train (inc. phase[$^{\circ}$]). This is typically 180 (alternating phase) or 0 (same phase).
+4. Choose the phase difference of the RF pulse train (inc. phase[°]). This is typically 180 (alternating phase) or 0 (same phase).
 5. Set the amplitude of the first RF pulse (First pulse amp). This should typically be 0.5.
 6. Set the frequency of the RF Pulse (f[Hz]). This is interesting in case you want to simulate spectrally selective RF pulses. Note that for high frequency offset, you will need to increase the number of time points simulated (N[points]).
 7. Set the first TR (1st TR[ms]). This is the duration between the first (often $\alpha$/2 RF pulse) and the second RF pulse.
-- In case you choose 180 $^{\circ}$ phase increment (inc. phase[$^{\circ}$]), it is recommended to set the first TR to 0.5 * TR to reduced the transient phase oscillations.
-- In case you choose 0 $^{\circ}$ phase increment (inc. phase[$^{\circ}$]), it is recommended to set the first TR to 1.0 * TR to reduced the transient phase oscillations.
+- In case you choose 180° phase increment (inc. phase[°]), it is recommended to set the first TR to 0.5 * TR to reduced the transient phase oscillations.
+- In case you choose 0° phase increment (inc. phase[°]), it is recommended to set the first TR to 1.0 * TR to reduced the transient phase oscillations.
 8. You can choose if you want to simulate (after N [Reps]) 
 - a "Spoiler Gradient" that sets the $M_{xy}$ component to 0.
 - And/or a "Tipback pulse" tries to tipback the magnetization with a $\alpha$/2 pulse.
