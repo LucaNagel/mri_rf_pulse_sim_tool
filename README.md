@@ -6,9 +6,9 @@ This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/
 - Download *bloch.m* and *bloch.c* and save them into the folder *bloch_sim* (make a new one)
 - Add the path where you store them to your matlab PATHS (HOME &rarr; Set Path &rarr; Add Folder)
 - Open `bloch.c` with any editor and change 
-1. in line 452, 453, 583, 602, 617, 663, 974, 726, 741, 742 `malloc`  to `mxMalloc`
-2. in 507 & 508 and line 909 to line 925 `free`  to `mxFree`
-3. in line 551 `int outsize[3];`  to `mwSize outsize[3];`
+1. in line **452, 453, 583, 602, 617, 663, 974, 726, 741, 742** `malloc`  to `mxMalloc`
+2. in line **507** & **508** and line **909** to line **925** `free`  to `mxFree`
+3. in line **551** `int outsize[3];`  to `mwSize outsize[3];`
 
 In case you don't want DEBUG output into your matlab Command Window, change `#define DEBUG` to `\\#define DEBUG` line 8.
 
