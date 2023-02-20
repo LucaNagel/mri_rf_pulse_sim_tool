@@ -10,7 +10,7 @@ This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/
 2. in line **507** & **508** and line **909** to line **925** `free`  to `mxFree`
 3. in line **551** `int outsize[3];`  to `mwSize outsize[3];`
 
-In case you don't want DEBUG output into your matlab Command Window, change `#define DEBUG` to `\\#define DEBUG` line 8.
+In case you don't want DEBUG output into your matlab Command Window, change `#define DEBUG` to `//#define DEBUG` line 8.
 
 
 - Open a Matlab session in the *bloch_sim* directory or use `cd('\path\to\bloch_sim\')`
