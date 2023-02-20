@@ -13,7 +13,7 @@ This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/
 In case you don't want DEBUG output into your matlab Command Window, change `#define DEBUG` to `//#define DEBUG` line 8.
 
 
-- Open a Matlab session in the *bloch_sim* directory or use `cd('\path\to\bloch_sim\')`
+- Open a Matlab session in the *bloch_sim* directory or use type `cd('\path\to\bloch_sim\')` in the matlab Command Window. 
 - In the Command Window run
     ```
     mex -v bloch.c
@@ -30,7 +30,7 @@ In case you don't want DEBUG output into your matlab Command Window, change `#de
 
 
 ## Usage:
-Start by either double-clicking _simulate_rf_pulse_b1_tool.mlapp_ (should start appdesigner) or by typing appdesigner in Matlab's command window and opening the _simulate_rf_pulse_b1_tool.mlapp. Run the tool by hitting function key F5 or pressing the green "Play" button.
+Start by either double-clicking _simulate_rf_pulse_b1_tool.mlapp_ (should start appdesigner) or by typing appdesigner in Matlab's command window and opening the _simulate_rf_pulse_b1_tool.mlapp. Run the tool by hitting function key `F5` or pressing the green `Play` button.
 ### Simulate RF Pulse:
 3. Load an RF Pulse (either .mat or .dat in the `RF Pulses` subfolder):
     - slr_sharp1_1ms_2000Hz will give you a Shinnar-LeRouge Pulse of 1ms and 2000Hz resulting bandwidth with "sharpness 1".
@@ -42,7 +42,7 @@ You can also change the range and the resolution (frequency **freq[Hz]** and pos
 7. Pressing `Simulate!` will run the Bloch Simulation with the selected parameters.
     - Note: If the parameter **yGradient Strength** is >0, a "slice selective Gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
 7. The simulation results will be plotted in the lower left windows.
-8. You can select one or multiple (hold Shift key) properties (Mx, My, ...) of the simulated magnetization.
+8. You can select one or multiple (hold `Ctrl` key) properties (Mx, My, ...) of the simulated magnetization.
     - If you didn't load a B1 map, just use the homogeneous (homo. B1) options.
 9. You can select multiple frequencies by choosing the `Show 2 Freqs`. Then you can select Freq 1 and Freq 2.
 10. You can also use the slider to select different frequencies.
