@@ -5,13 +5,23 @@ This tool uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/
 1. Install **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)**.
 - Download *bloch.m* and *bloch.c* and save them into the folder *bloch_sim* (make a new one)
 - Add the path where you store them to your matlab PATHS (HOME &rarr; Set Path &rarr; Add Folder)
-- Open *bloch.c* with any editor and change *int outsize[3];* in line 551 to *mwSize outsize[3];*
+- Open `bloch.c` with any editor and change 
+1. in line 452, 453, 583, 602, 617, 663, 974, 726, 741, 742 `malloc`  to `mxMalloc`
+2. in 507 & 508 and line 909 to line 925 `free`  to `mxFree`
+3. in line 551 `int outsize[3];`  to `mwSize outsize[3];`
+
+In case you don't want DEBUG output into your matlab Command Window, change `#define DEBUG` to `\\#define DEBUG` line 8.
+
+
 - Open a Matlab session in the *bloch_sim* directory or use `cd('\path\to\bloch_sim\')`
 - In the Command Window run
     ```
     mex -v bloch.c
     ```
-
+    This should result in
+    ```
+    MEX completed successfully.
+    ```
 - You might need to install an compiler (Windows), the one that MathWorks suggests is this one: https://de.mathworks.com/support/requirements/supported-compilers.html
 - You'll need to have Matlab's Appdesigner installed.
 
