@@ -39,23 +39,32 @@ It uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/
 
 ## Usage:
 Start by either double-clicking **simulate_rf_pulse_b1_tool.mlapp** (should start appdesigner) or by typing appdesigner in Matlab's command window and opening the **simulate_rf_pulse_b1_tool.mlapp**. Run the tool by hitting function key `F5` or pressing the green `Play` button.
-### Simulate RF Pulse:
-1. Load an RF Pulse (either .mat or .dat in the `RF Pulses` subfolder):
+### Simulate RF pulse:
+1. `Select` an RF pulse (either .mat or .dat in the `RF Pulses` subfolder):
     - **slr_sharp1_1ms_2000Hz** will give you a Shinnar-LeRouge Pulse of 1ms and 2000Hz resulting bandwidth with "sharpness 1".
     - **AFP_2_3182ms_Hsn** is an Adiabatic Full Passage Pulse of 2.3162ms (taken from Robin de Graaf's pulsewizard toolbox)
-2. Press `Load` to load the pulse.
-3. You can now edit pulse duration, flipangle, pulse amplitude, and gradient strength. Bandwith factor BWfac and integration factor Sint are intrinsic properties of the pulse and can not be changed.
-You can also change the range and the resolution (frequency **freq[Hz]** and position **FOV[cm]**) over which the simulation will be performed.
+2. Press `Load` to load the RF pulse.
+    * If the loading of the RF pulse was successfull, the RF pulse shape shpuld be plotted in the upper left figure. 
+4. **alpha [°]** sets the flipangle in degree and automatically calculates the necessary pulse amplitude **B1 [kHz]**.
+5. **B1 [kHz]** sets the RF pulse amplitude and automatically calculates the resulting flipangle **alpha [°]**.
+
+    Bandwidth factor **BWfac [Hz $\cdot$ s]** and integration factor **Sint** are intrinsic properties of the pulse and can not be changed.
+
+3. In the `1D` Tab you can edit:
+    * RF pulse duration **Pulse duration [ms]**, 
+    * the gradient strength during the RF pulse (**yGradient Strength [kHz/cm]**)
+        - Note: If the parameter **yGradient Strength** is >0, a "slice selective Gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
+    * the the range and the resolution (frequency **freq[Hz]**) over which the simulation will be performed.
+    * the Field-of-view and resolution (**FOV[cm]**) over which the simulation will be performed.
 4. You can also change the `Sample` properties, such as **T1[s]** and **T2[s]**. You can also simulate hyperpolarized experiments by setting the polarization **HP** to higher than 1.
-5. Pressing `Simulate!` will run the Bloch Simulation with the selected parameters.
-    - Note: If the parameter **yGradient Strength** is >0, a "slice selective Gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
-6. The simulation results will be plotted in the lower left windows.
+5. Pressing `Simulate!` will run the Bloch Simulation with the selected parameters. 
+6. The simulation results will be plotted in the lower left window. Here you can see the simulated magnetization over the FOV.
 7. You can select one or multiple (hold `Ctrl` key) properties (Mx, My, ...) of the simulated magnetization.
     - If you didn't load a B1 map, just use the homogeneous (homo. B1) options.
 8. You can select multiple frequencies by choosing the `Show 2 Freqs`. Then you can select Freq 1 and Freq 2.
 9. You can also use the slider to select different frequencies.
 10. On the Bottom you can find a filed saying `save`. For now I'd recommend to select all options on the list and hit the `save` button.
-### Simulate repeated excitation with RF Pulse:
+### Simulate repeated excitation with RF pulse:
 You can simulate repeated excitations in the Tab `Simulate Repeated Excitation (FISP/bSSFP)`. Recommended steps:
 
 In the Tab `1D`:
@@ -69,10 +78,10 @@ In the Tab `Simulate Repeated Excitation (FISP/bSSFP)`:
 5. Set the number of repetitions that you want to simulate (**N[Reps]**).
 6. Choose the phase difference of the RF pulse train (**inc. phase[°]**). This is typically 180 (alternating phase) or 0 (same phase).
 7. Sets the amplitude factor of the first RF pulse (**First pulse amp**). This should typically be 0.5 which means the first pulse has 0.5 x the RF pulse amplitude.
-8. Set the frequency of the RF Pulse (**f[Hz]**). This is interesting in case you want to simulate spectrally selective RF pulses. Note that for high frequency offset, you will need to increase the number of time points simulated (**N[points]**).
+8. Set the frequency of the RF pulse (**f[Hz]**). This is interesting in case you want to simulate spectrally selective RF pulses. Note that for high frequency offset, you will need to increase the number of time points simulated (**N[points]**).
 9. Set the first TR (1st **TR[ms]**). This is the duration between the first (often $\alpha$/2 RF pulse) and the second RF pulse.
-    - In case you choose 180° phase increment (**inc. phase[°]**), it is recommended to set the first TR to 0.5 * TR to reduced the transient phase oscillations.
-    - In case you choose 0° phase increment (**inc. phase[°]**), it is recommended to set the first TR to 1.0 * TR to reduced the transient phase oscillations.
+    - In case you choose 180° phase increment (**inc. phase[°]**), it is recommended to set the first TR to 0.5 * TR to reduce the transient phase oscillations.
+    - In case you choose 0° phase increment (**inc. phase[°]**), it is recommended to set the first TR to 1.0 * TR to reduce the transient phase oscillations.
 10. You can choose if you want to simulate (after **N[Reps]**)
     - a **Spoiler Gradient** that sets the $M_{xy}$ component to 0.
     - And/or a **Tipback pulse** tries to tipback the magnetization with a $\alpha$/2 pulse.
