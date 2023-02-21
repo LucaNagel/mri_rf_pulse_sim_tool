@@ -1,24 +1,24 @@
 # calc_pulse_tool
 This tool is a GUI built in matlab's appdesigner.
- It uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** to perform Bloch simulations of the RF Pulses in Matlab. Also has the option to simulate inhomogeneous B1 excitation fields as well as repeated excitations (bSSFP).
+It uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** to perform Bloch simulations of RF pulses used in MRI. The tool also provides the option to simulate inhomogeneous B1 excitation fields as well as repeated excitations (bSSFP).
 
 ## Installation:
 ### Dependencies:
 * Matlab with appdesigner installed
 * A C++ compiler (the ones that MathWorks suggests can be found here: https://de.mathworks.com/support/requirements/supported-compilers.html)
 
-1. Install **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)**.
-    - **Download** *bloch.m* and *bloch.c* and save them into the folder *bloch_sim* (make a new one)
-    - Add the path where you store them to your matlab PATHS (HOME &rarr; Set Path &rarr; Add Folder)
-    - Open `bloch.c` with any editor and change 
-    - all `malloc` to `mxMalloc`
-    - all `free` to `mxFree`
-    - on line **552** `int outsize[3];`  to `mwSize outsize[3];`
+1. Download & Install [Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/):
+.
+    - Download **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** (i.e. **bloch.m** and **bloch.c**) and save them into the folder `bloch_sim` (make a new one)
+    - Add `\path\to\bloch_sim\` to your matlab PATHS (HOME &rarr; Set Path &rarr; Add Folder)
+    - Open `bloch.c` with any editor and change: 
+        - all `malloc` to `mxMalloc`
+        - all `free` to `mxFree`
+        - on line **552** `int outsize[3];`  to `mwSize outsize[3];`
+        - In case you don't want DEBUG output into your matlab Command Window, change `#define DEBUG` to `//#define DEBUG` line 8.
 
-    In case you don't want DEBUG output into your matlab Command Window, change `#define DEBUG` to `//#define DEBUG` line 8.
 
-
-    - Open a Matlab session in the *bloch_sim* directory or use type `cd('\path\to\bloch_sim\')` in the matlab Command Window. 
+    - Open a Matlab session in the `bloch_sim` directory or use `cd('\path\to\bloch_sim\')` in the matlab Command Window. 
     - In the Command Window run
         ```
         mex -v bloch.c
@@ -28,16 +28,21 @@ This tool is a GUI built in matlab's appdesigner.
         MEX completed successfully.
         ```
 
-2. Download `mri_rf_pulse_sim_tool` and add it to your matlabs PATHS (HOME &rarr; Set Path &rarr; Add Folder)
-    - type `appdesigner` in matlab Command Window and open `simulate_rf_pulse_b1_tool` in the `mri_rf_pulse_sim_tool`  folder, then press `F5`
+2. Download & Install mri_rf_pulse_sim_tool:
+    - Download [mri_rf_pulse_sim_tool](https://github.com/LucaNagel/mri_rf_pulse_sim_tool/archive/refs/heads/main.zip) and unzip OR clone the repository to your computer via:
+    ```
+    git clone https://github.com/LucaNagel/mri_rf_pulse_sim_tool.git
+    ```
+    and add it to your matlabs PATHS (HOME &rarr; Set Path &rarr; Add Folder).
+    - Type `appdesigner` in matlab Command Window and open **simulate_rf_pulse_b1_tool** in the `mri_rf_pulse_sim_tool` folder, then press `F5`
 
 
 ## Usage:
-Start by either double-clicking _simulate_rf_pulse_b1_tool.mlapp_ (should start appdesigner) or by typing appdesigner in Matlab's command window and opening the _simulate_rf_pulse_b1_tool.mlapp. Run the tool by hitting function key `F5` or pressing the green `Play` button.
+Start by either double-clicking **simulate_rf_pulse_b1_tool.mlapp** (should start appdesigner) or by typing appdesigner in Matlab's command window and opening the **simulate_rf_pulse_b1_tool.mlapp**. Run the tool by hitting function key `F5` or pressing the green `Play` button.
 ### Simulate RF Pulse:
 1. Load an RF Pulse (either .mat or .dat in the `RF Pulses` subfolder):
-    - slr_sharp1_1ms_2000Hz will give you a Shinnar-LeRouge Pulse of 1ms and 2000Hz resulting bandwidth with "sharpness 1".
-    - AFP_2_3182ms_Hsn is an Adiabatic Full Passage Pulse of 2.3162ms (taken from Robin de Graaf's pulsewizard toolbox)
+    - **slr_sharp1_1ms_2000Hz** will give you a Shinnar-LeRouge Pulse of 1ms and 2000Hz resulting bandwidth with "sharpness 1".
+    - **AFP_2_3182ms_Hsn** is an Adiabatic Full Passage Pulse of 2.3162ms (taken from Robin de Graaf's pulsewizard toolbox)
 2. Press `Load` to load the pulse.
 3. You can now edit pulse duration, flipangle, pulse amplitude, and gradient strength. Bandwith factor BWfac and integration factor Sint are intrinsic properties of the pulse and can not be changed.
 You can also change the range and the resolution (frequency **freq[Hz]** and position **FOV[cm]**) over which the simulation will be performed.
