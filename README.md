@@ -51,7 +51,7 @@ You can also change the range and the resolution (frequency **freq[Hz]** and pos
 You can simulate repeated excitations in the Tab `Simulate Repeated Excitation (FISP/bSSFP)`. Recommended steps:
 In the Tab `1D`:
 1. Since you are mainly interested in the frequency response profile, set *points* of the **FOV[cm]** parameter to 1 and the *value* to 0.
-2. Set the simulated frequencies (freq [Hz]) to a proper resultion (~1-5Hz).
+2. Set the simulated frequencies (**freq [Hz]**) to a proper resultion (~1-5Hz).
 
 In the Tab `Simulate Repeated Excitation (FISP/bSSFP)`:
 1. Set **TR[ms]** to your desired repetition time (Note: can not be shorter than pulse duration).
