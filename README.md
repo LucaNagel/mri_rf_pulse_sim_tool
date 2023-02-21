@@ -57,24 +57,26 @@ You can also change the range and the resolution (frequency **freq[Hz]** and pos
 10. On the Bottom you can find a filed saying `save`. For now I'd recommend to select all options on the list and hit the `save` button.
 ### Simulate repeated excitation with RF Pulse:
 You can simulate repeated excitations in the Tab `Simulate Repeated Excitation (FISP/bSSFP)`. Recommended steps:
+
 In the Tab `1D`:
 1. Since you are mainly interested in the frequency response profile, set *points* of the **FOV[cm]** parameter to 1 and the *value* to 0.
 2. Set the simulated frequencies (**freq [Hz]**) to a proper resultion (~1-5Hz).
 
 In the Tab `Simulate Repeated Excitation (FISP/bSSFP)`:
-1. Set **TR[ms]** to your desired repetition time (Note: can not be shorter than pulse duration).
-2. Set number of time points of each pulse that are simulated (**N[points]**) to a reasonably high number (~500).
-3. Set the number of repetitions that you want to simulate (**N[Reps]**).
-4. Choose the phase difference of the RF pulse train (**inc. phase[°]**). This is typically 180 (alternating phase) or 0 (same phase).
-5. Sets the amplitude factor of the first RF pulse (**First pulse amp**). This should typically be 0.5 which means the first pulse has 0.5 x the RF pulse amplitude.
-6. Set the frequency of the RF Pulse (**f[Hz]**). This is interesting in case you want to simulate spectrally selective RF pulses. Note that for high frequency offset, you will need to increase the number of time points simulated (**N[points]**).
-7. Set the first TR (1st **TR[ms]**). This is the duration between the first (often $\alpha$/2 RF pulse) and the second RF pulse.
+
+3. Set **TR[ms]** to your desired repetition time (Note: can not be shorter than pulse duration).
+4. Set number of time points of each pulse that are simulated (**N[points]**) to a reasonably high number (~500).
+5. Set the number of repetitions that you want to simulate (**N[Reps]**).
+6. Choose the phase difference of the RF pulse train (**inc. phase[°]**). This is typically 180 (alternating phase) or 0 (same phase).
+7. Sets the amplitude factor of the first RF pulse (**First pulse amp**). This should typically be 0.5 which means the first pulse has 0.5 x the RF pulse amplitude.
+8. Set the frequency of the RF Pulse (**f[Hz]**). This is interesting in case you want to simulate spectrally selective RF pulses. Note that for high frequency offset, you will need to increase the number of time points simulated (**N[points]**).
+9. Set the first TR (1st **TR[ms]**). This is the duration between the first (often $\alpha$/2 RF pulse) and the second RF pulse.
     - In case you choose 180° phase increment (**inc. phase[°]**), it is recommended to set the first TR to 0.5 * TR to reduced the transient phase oscillations.
     - In case you choose 0° phase increment (**inc. phase[°]**), it is recommended to set the first TR to 1.0 * TR to reduced the transient phase oscillations.
-8. You can choose if you want to simulate (after **N[Reps]**)
+10. You can choose if you want to simulate (after **N[Reps]**)
     - a **Spoiler Gradient** that sets the $M_{xy}$ component to 0.
     - And/or a **Tipback pulse** tries to tipback the magnetization with a $\alpha$/2 pulse.
-9. Then hit `Simulate Reps!` at the right top of the `Simulate Repeated Excitation (FISP/bSSFP)` Tab.
+11. Then hit `Simulate Reps!` at the right top of the `Simulate Repeated Excitation (FISP/bSSFP)` Tab.
 
 In case the **N[points]** parameter turns red, type in a slightly bigger or smaller number. In general, even numbers work better.This will be fixed in a future release.
 
