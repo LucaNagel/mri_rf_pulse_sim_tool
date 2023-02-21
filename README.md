@@ -1,6 +1,6 @@
 # calc_pulse_tool
 This tool is a GUI built in matlab's appdesigner.
-It uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** to perform Bloch simulations of RF pulses used in MRI. The tool also provides the option to simulate inhomogeneous B1 excitation fields as well as repeated excitations (bSSFP).
+It uses  **[Brian Hargreaves' Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** to perform Bloch simulations of RF pulses used in MRI. The tool also provides the option to simulate inhomogeneous B1 excitation fields as well as repeated excitations (bSSFP).
 
 ## Installation:
 ### Dependencies:
@@ -9,7 +9,7 @@ It uses  **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/
 
 1. Download & Install [Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/):
 .
-    - Download **[Brian Hargreave's Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** (i.e. **bloch.m** and **bloch.c**) and save them into the folder `bloch_sim` (make a new one)
+    - Download **[Brian Hargreaves' Bloch Simulator](http://mrsrl.stanford.edu/~brian/blochsim/)** (i.e. **bloch.m** and **bloch.c**) and save them into the folder `bloch_sim` (make a new one)
     - Add `\path\to\bloch_sim\` to your matlab PATHS (HOME &rarr; Set Path &rarr; Add Folder)
     - Open `bloch.c` with any editor and change: 
         - all `malloc` to `mxMalloc`
