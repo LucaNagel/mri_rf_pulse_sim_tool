@@ -44,7 +44,7 @@ Start by either double-clicking **simulate_rf_pulse_b1_tool.mlapp** (should star
     - **slr_sharp1_1ms_2000Hz** will give you a Shinnar-LeRouge Pulse of 1ms and 2000Hz resulting bandwidth with "sharpness 1".
     - **AFP_2_3182ms_Hsn** is an Adiabatic Full Passage Pulse of 2.3162ms (taken from Robin de Graaf's pulsewizard toolbox)
 2. Press `Load` to load the RF pulse.
-    * If the loading of the RF pulse was successfull, the RF pulse shape shpuld be plotted in the upper left figure. 
+    * If the loading of the RF pulse was successful, the RF pulse shape should be plotted in the upper left figure. 
 4. **alpha [°]** sets the flipangle in degree and automatically calculates the necessary pulse amplitude **B1 [kHz]**.
 5. **B1 [kHz]** sets the RF pulse amplitude and automatically calculates the resulting flipangle **alpha [°]**.
 
@@ -53,8 +53,8 @@ Start by either double-clicking **simulate_rf_pulse_b1_tool.mlapp** (should star
 3. In the `1D` Tab you can edit:
     * RF pulse duration **Pulse duration [ms]**, 
     * the gradient strength during the RF pulse (**yGradient Strength [kHz/cm]**)
-        - Note: If the parameter **yGradient Strength** is >0, a "slice selective Gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
-        - The resolution info here is used for a estimate of the slice thiknness.
+        - Note: If the parameter **yGradient Strength** is >0, a "slice selective gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
+        - The resolution info here is used for a estimate of the slice thickness.
     * the the range and the resolution (frequency **freq[Hz]**) over which the simulation will be performed.
     * the Field-of-view and resolution (**FOV[cm]**) over which the simulation will be performed.
 4. You can also change the `Sample` properties, such as **T1[s]** and **T2[s]**. You can also simulate hyperpolarized experiments by setting the polarization **HP** to higher than 1.
@@ -70,7 +70,7 @@ You can simulate repeated excitations in the Tab `Simulate Repeated Excitation (
 
 In the Tab `1D`:
 1. Since you are mainly interested in the frequency response profile, set *points* of the **FOV[cm]** parameter to 1 and the *value* to 0.
-2. Set the simulated frequencies (**freq [Hz]**) to a proper resultion (~1-5Hz).
+2. Set the simulated frequencies (**freq [Hz]**) to a proper resolution (~1-5Hz).
 
 In the Tab `Simulate Repeated Excitation (FISP/bSSFP)`:
 
@@ -90,10 +90,6 @@ In the Tab `Simulate Repeated Excitation (FISP/bSSFP)`:
 
 In case the **N[points]** parameter turns red, type in a slightly bigger or smaller number. In general, even numbers work better.This will be fixed in a future release.
 
-You can have a look at what the frequency response profile looks like in the lower right figure. You can change the repetition with the `rep` slider. You can also look at the time evoolution of certain frequencies by changing the `freq` slider.
+You can have a look at what the frequency response profile looks like in the lower right figure. You can change the repetition with the `rep` slider. You can also look at the time evolution of certain frequencies by changing the `freq` slider.
 
 <img src="./figures/Screenshot bSSFP Simulation example full GUI.png" alt = "Screnshot of the GUI with exemplarily parameter selection." width="1000"/>
-
-
-
-
