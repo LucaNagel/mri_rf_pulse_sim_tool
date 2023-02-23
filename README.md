@@ -54,9 +54,9 @@ Start by either double-clicking **simulate_rf_pulse_b1_tool.mlapp** (should star
     * RF pulse duration **Pulse duration [ms]**, 
     * the gradient strength during the RF pulse (**yGradient Strength [kHz/cm]**)
         - Note: If the parameter **yGradient Strength** is >0, a "slice selective gradient" and a rephasing gradient (50% area of slice selective gradient) will be simulated.
-        - The resolution info here is used for a estimate of the slice thickness.
+        - The resolution info box is here used for an estimate of the slice thickness.
     * the the range and the resolution (frequency **freq[Hz]**) over which the simulation will be performed.
-    * the Field-of-view and resolution (**FOV[cm]**) over which the simulation will be performed.
+    * the Field-of-View and resolution (**FOV[cm]**) over which the simulation will be performed.
 4. You can also change the `Sample` properties, such as **T1[s]** and **T2[s]**. You can also simulate hyperpolarized experiments by setting the polarization **HP** to higher than 1.
 5. Pressing `Simulate!` will run the Bloch Simulation with the selected parameters. 
 6. The simulation results will be plotted in the lower left window. Here you can see the simulated magnetization over the FOV.

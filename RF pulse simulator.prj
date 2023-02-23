@@ -1,15 +1,16 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration file="C:\Users\Luca\Documents\phd\simulate_rf_pulse_b1_tool\RF pulse simulator.prj" location="C:\Users\Luca\Documents\phd\simulate_rf_pulse_b1_tool" name="RF pulse simulator" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="611756176" file="C:\Users\nmrluca\Documents\phd\calc_pulse_tool\RF pulse simulator.prj" location="C:\Users\nmrluca\Documents\phd\calc_pulse_tool" name="RF pulse simulator" target="target.mlapps" target-name="Package App">
     <param.appname>RF pulse simulator</param.appname>
     <param.authnamewatermark>Luca Nagel</param.authnamewatermark>
     <param.email>luca.nagel@tum.de</param.email>
-    <param.company />
+    <param.company>TUM</param.company>
     <param.icon />
     <param.icons />
-    <param.summary />
-    <param.description />
-    <param.screenshot>C:\Users\Luca\AppData\Local\Temp\tpb2fe1f12_72a2_480c_a934_4b44d8693dc7.png</param.screenshot>
-    <param.version>1.0</param.version>
+    <param.summary>Tool to simumalate RF pulses for MRI</param.summary>
+    <param.description>Documentation can be found here:
+https://github.com/LucaNagel/mri_rf_pulse_sim_tool</param.description>
+    <param.screenshot>C:\Users\nmrluca\AppData\Local\Temp\tpc6c6738c_5bec_43b8_920e_6f65d719c378.png</param.screenshot>
+    <param.version>0.11</param.version>
     <param.products.name />
     <param.products.id />
     <param.products.version />
@@ -19,12 +20,8 @@
     <param.output>${PROJECT_ROOT}</param.output>
     <param.guid>d82f719f-8ab0-4bf6-ab42-d5d713bac594</param.guid>
     <unset>
-      <param.company />
       <param.icon />
       <param.icons />
-      <param.summary />
-      <param.description />
-      <param.version />
       <param.products.name />
       <param.products.id />
       <param.products.version />
@@ -34,33 +31,33 @@
       <file>${PROJECT_ROOT}\simulate_rf_pulse_b1_tool.mlapp</file>
     </fileset.main>
     <fileset.depfun>
-      <file>C:\Users\Luca\Documents\phd\bloch_sim\bloch_13c_no_output.mexw64</file>
-      <file>C:\Users\Luca\Documents\phd\bloch_sim\bloch_no_output.mexw64</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\datatypes\BrukerDataSuperclass.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\datatypes\ImageDataObject.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\bruker_addParamValue.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\bruker_requires.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\exportToPV\bruker_genSlopeOffsMinMax.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\exportToPV\bruker_genVisu.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\exportToPV\bruker_write2dseq.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\exportToPV\bruker_writeVisu.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\FrameGroups_Transposition\bruker_getFrameGroupParams.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\FrameGroups_Transposition\bruker_getTranspositionFrame.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\additional\FrameGroups_Transposition\bruker_setTranspositionFrame.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\brViewer.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\readBruker2dseq.m</file>
-      <file>C:\Users\Luca\Documents\phd\recon_gui\pvtools\functions\readBrukerParamFile.m</file>
-      <file>${PROJECT_ROOT}\calc_slice_thick.m</file>
-      <file>D:\PhD\LRZ Sync+Share\phd\MatlabCode\mhf\ByteSize.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bloch_sim\bloch.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bloch_sim\bloch.mexw64</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\datatypes\BrukerDataSuperclass.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\datatypes\ImageDataObject.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\bruker_addParamValue.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\bruker_requires.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\exportToPV\bruker_genSlopeOffsMinMax.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\exportToPV\bruker_genVisu.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\exportToPV\bruker_write2dseq.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\exportToPV\bruker_writeVisu.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\FrameGroups_Transposition\bruker_getFrameGroupParams.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\FrameGroups_Transposition\bruker_getTranspositionFrame.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\additional\FrameGroups_Transposition\bruker_setTranspositionFrame.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\brViewer.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\readBruker2dseq.m</file>
+      <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\readBrukerParamFile.m</file>
+      <file>${PROJECT_ROOT}\load_anatomical.m</file>
+      <file>D:\LRZ Sync+Share\MatlabCode\mhf\ByteSize.m</file>
     </fileset.depfun>
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\Luca\Documents\phd" name="simulate_rf_pulse_b1_tool" optional="false">C:\Users\Luca\Documents\phd\simulate_rf_pulse_b1_tool</file>
+      <file location="C:\Users\nmrluca\Documents\phd" name="calc_pulse_tool" optional="false">C:\Users\nmrluca\Documents\phd\calc_pulse_tool</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2021b</root>
+      <root>C:\Program Files\MATLAB\R2022b</root>
       <toolboxes />
     </matlab>
     <platform>
