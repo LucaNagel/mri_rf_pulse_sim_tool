@@ -2,3 +2,5 @@ anatomical_images/
 simulations/
 RF pulses/Bruker/
 B1 Maps/
+*.log
+load_anatomical.m
