@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.apptool" plugin-version="1.0">
-  <configuration build-checksum="611756176" file="C:\Users\nmrluca\Documents\phd\calc_pulse_tool\RF pulse simulator.prj" location="C:\Users\nmrluca\Documents\phd\calc_pulse_tool" name="RF pulse simulator" target="target.mlapps" target-name="Package App">
+  <configuration build-checksum="611756176" file="C:\Users\Jakob\Documents\TUM\5th Semester\Masters Thesis\Tools\Matlab\calc_pulse_tool\RF pulse simulator.prj" location="C:\Users\Jakob\Documents\TUM\5th Semester\Masters Thesis\Tools\Matlab\calc_pulse_tool" name="RF pulse simulator" target="target.mlapps" target-name="Package App">
     <param.appname>RF pulse simulator</param.appname>
     <param.authnamewatermark>Luca Nagel</param.authnamewatermark>
     <param.email>luca.nagel@tum.de</param.email>
@@ -9,7 +9,7 @@
     <param.summary>Tool to simumalate RF pulses for MRI</param.summary>
     <param.description>Documentation can be found here:
 https://github.com/LucaNagel/mri_rf_pulse_sim_tool</param.description>
-    <param.screenshot>C:\Users\nmrluca\AppData\Local\Temp\tpc6c6738c_5bec_43b8_920e_6f65d719c378.png</param.screenshot>
+    <param.screenshot />
     <param.version>0.11</param.version>
     <param.products.name />
     <param.products.id />
@@ -22,6 +22,7 @@ https://github.com/LucaNagel/mri_rf_pulse_sim_tool</param.description>
     <unset>
       <param.icon />
       <param.icons />
+      <param.screenshot />
       <param.products.name />
       <param.products.id />
       <param.products.version />
@@ -31,6 +32,7 @@ https://github.com/LucaNagel/mri_rf_pulse_sim_tool</param.description>
       <file>${PROJECT_ROOT}\simulate_rf_pulse_b1_tool.mlapp</file>
     </fileset.main>
     <fileset.depfun>
+      <file>${PROJECT_ROOT}\load_anatomical.m</file>
       <file>C:\Users\nmrluca\Documents\phd\bloch_sim\bloch.m</file>
       <file>C:\Users\nmrluca\Documents\phd\bloch_sim\bloch.mexw64</file>
       <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\datatypes\BrukerDataSuperclass.m</file>
@@ -47,13 +49,12 @@ https://github.com/LucaNagel/mri_rf_pulse_sim_tool</param.description>
       <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\brViewer.m</file>
       <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\readBruker2dseq.m</file>
       <file>C:\Users\nmrluca\Documents\phd\bssfp-tool\recon_gui\pvtools\functions\readBrukerParamFile.m</file>
-      <file>${PROJECT_ROOT}\load_anatomical.m</file>
       <file>D:\LRZ Sync+Share\MatlabCode\mhf\ByteSize.m</file>
     </fileset.depfun>
     <fileset.resources />
     <fileset.package />
     <build-deliverables>
-      <file location="C:\Users\nmrluca\Documents\phd" name="calc_pulse_tool" optional="false">C:\Users\nmrluca\Documents\phd\calc_pulse_tool</file>
+      <file location="C:\Users\Jakob\Documents\TUM\5th Semester\Masters Thesis\Tools\Matlab" name="calc_pulse_tool" optional="false">C:\Users\Jakob\Documents\TUM\5th Semester\Masters Thesis\Tools\Matlab\calc_pulse_tool</file>
     </build-deliverables>
     <workflow />
     <matlab>
